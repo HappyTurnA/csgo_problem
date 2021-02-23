@@ -6,11 +6,12 @@ while(loopCount <= 10000000) {
     for(let i = 0; i < 7; ++i) {
         let r = Math.random();
         if(r >= 0.5) {
-            // 命中
+            // 50%で命中
             if(r >= 0.8) {
-                // kill
+                // 20%でHS(kill)
                 hitCount = 3;
             } else {
+                // それ以外は単HIT
                 hitCount++;
             }
         } else {
@@ -18,7 +19,7 @@ while(loopCount <= 10000000) {
         }
     }
     loopCount++;
-    if(hitCount >= 3) {
+    if(hitCount >= 3) { // hit3 以上でキル判定
         killCount++;
     }
 }
